@@ -1,2 +1,5 @@
-# college_works
-Repo for most if not all of my college works related to CS.
+# College Works
+
+### Latest
+
+- JCalc: A Calculator made with AWT
