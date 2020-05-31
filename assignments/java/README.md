@@ -1,4 +1,4 @@
 ## JCalc
 
--Main Class: RunThis
--Executable: JCalc.jar
+>Main Class: RunThis <br/>
+>Executable: JCalc.jar <br/>
