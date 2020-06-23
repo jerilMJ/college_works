@@ -9,13 +9,19 @@ public class FileReadReverse {
     private static BufferedReader bReader;
 
     public static void main(String[] args) {
-        String filePath = "./sample.txt";
+        if (args.length < 1) {
+            System.out.println("Please provide path to file as argument.");
+            return;
+        }
+
+        String filePath = args[0];
 
         try {
             Iterator<String> lines = getLinesInReverse(filePath);
             while (lines.hasNext()) {
                 System.out.println(lines.next());
             }
+
             bReader.close();
         } catch (FileNotFoundException e) {
             System.out.println("File not found. Make sure it exists. Error: " + e);
@@ -24,7 +30,7 @@ public class FileReadReverse {
         }
     }
 
-    private static Iterator<String> getLinesInReverse(String filePath) throws FileNotFoundException, IOException {
+    private static Iterator<String> getLinesInReverse(String filePath) throws FileNotFoundException {
         reader = new FileReader(filePath);
         bReader = new BufferedReader(reader);
 
